@@ -9,12 +9,6 @@ class Users::RegistrationsController < Devise::RegistrationsController
     devise_parameter_sanitizer.permit(:account_update, keys: [:first_name, :last_name])
   end
 
-  def new
-  end
-
-  def create
-  end
-
   private
 
   def sign_up_params
