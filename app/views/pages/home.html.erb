@@ -8,7 +8,7 @@
     <p>Installé à Istanbul depuis 2 ans, j'ai décidé de quitter la grisaille et la société de castes parisienne</p>
   </div>
   <div class="col-4">
-    <%= image_tag "Zach.jpg", alt: "Zach", width: 500 %>
+    <%= image_tag "Zach.jpg", alt: "Zach", width: 450 %>
   </div>
 </div>
 
@@ -30,3 +30,5 @@
     </div>
   </div>
 </div>
+
+<%= render 'layouts/booking_form', locals: { booking: @booking } %>

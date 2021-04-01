@@ -13,7 +13,7 @@ require("channels")
 
 document.addEventListener('turbolinks:load', () => {
   // Call your JS functions here
-  myFunction();
+  // myFunction();
   initFlatpickr();
   //changeBackgroundPicture();
 });
