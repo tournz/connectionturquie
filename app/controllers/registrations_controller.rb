@@ -1,5 +1,5 @@
-class Users::RegistrationsController < Devise::RegistrationsController
-  before_action :configure_permitted_parameters, if: :devise_controller?
+class RegistrationsController < Devise::RegistrationsController
+  before_action :configure_permitted_parameters, only: :create
 
   def configure_permitted_parameters
     # For additional fields in app/views/devise/registrations/new.html.erb
@@ -15,6 +15,11 @@ class Users::RegistrationsController < Devise::RegistrationsController
 
   def create
     @user = User.new(sign_up_params)
+    if @user.save
+      redirect_to root_path
+    else
+      render :new
+    end
   end
 
   private
