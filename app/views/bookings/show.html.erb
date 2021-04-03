@@ -1,5 +1,4 @@
-<h1>Your booking has been confirmed</h1>
-<p><%= @booking.user.first_name %></p>
-<p><%= @booking.user.last_name %></p>
-<p><%= @booking.start_time %></p>
-<p><%= @booking.end_time %></p>
+<div class="container"><h1>Ta réservation est presque terminée</h1>
+<p><%= @booking.user.first_name %> <%= @booking.user.last_name %></p>
+<p>Date: <%= @booking.date.strftime("%d/%m/%Y") %> de <%= @booking.start_time.strftime("%Hh%M") %> à <%= @booking.end_time.strftime("%Hh%M") %></p>
+</div>
